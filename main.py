@@ -81,4 +81,5 @@ def apply(folder: str|Path):
 if __name__ == "__main__":
 	if len(sys.argv) < 2:
 		print(f"Usage: {sys.argv[0]} path\\to\\Indivisible")
+		sys.exit(0)
 	sys.exit(apply(sys.argv[1]))
