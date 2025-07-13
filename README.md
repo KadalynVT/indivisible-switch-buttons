@@ -2,7 +2,7 @@
 
 For some reason the GoG version of Indivisible doesn't have a way to show the Switch button layout when using a pro controller, this is a mod that fixes that!
 
-Eventually I'll make an exe for people who don't want to figure out Python.
+Grab the installer from [https://github.com/KadalynVT/indivisible-switch-buttons/releases/tag/v1.0](here)! Download and unzip `IndivisibleSwitchButtons.zip` then drag your Indivisible folder onto `IndivisibleSwitchButtons.exe`
 
 ## Run from source
 
