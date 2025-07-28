@@ -34,14 +34,15 @@ def apply(folder: str|Path):
 	xor_parallel(data, get_key(), 0)
 
 	def switch(mo: re.Match):
-		return {
+		return b"= [=[{X" + {
 			b"A": b"B", b"B": b"A",
 			b"X": b"Y", b"Y": b"X",
-		}[mo.group(1)]
-	re.sub(br"\{X([ABXY])\}", switch, data)
+		}[mo.group(1)] + b"}]=]"
+	data = bytearray(re.sub(br"= \[=\[\{X([ABXY])\}\]=\]", switch, data))
 	xor_parallel(data, get_key(), 0)
 	data1.write_bytes(data)
 	print(" ...swapped")
+	return 0
 
 	## Swap buttons as they appear in battle
 	print("Swapping buttons in battle...")
